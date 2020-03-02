@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="BaseAppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="snackbarStyle">@style/MySnackBarStyle</item>
+        <item name="textInputStyle">@style/Widget.BasicStructure.TextInputLayout</item>
+    </style>
+
+    <style name="AppTheme" parent="BaseAppTheme" />
+
+    <!-- Snackbar style -->
+    <style name="MySnackBarStyle" parent="Widget.MaterialComponents.Snackbar">
+        <item name="android:background">@color/mySnackbarBackgroundColor</item>
+    </style>
+
+    <!-- TextInputLayout style -->
+    <style name="Widget.BasicStructure.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextColor">@color/colorPrimaryDark</item>
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+    </style>
+
+    <!-- Register button style -->
+    <style name="Widget.BasicStructure.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="backgroundTint">?attr/colorPrimaryDark</item>
+    </style>
+
+</resources>

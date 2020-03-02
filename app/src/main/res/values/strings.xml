@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BasicStructure</string>
+    <string name="user_name_hint">User name</string>
+    <string name="email_hint">Email</string>
+    <string name="phone_number_hint">Phone Number</string>
+    <string name="button_register">register</string>
+    <string name="password_hint">Password</string>
+    <string name="user_avatar_image">user profile avatar image</string>
+</resources>
