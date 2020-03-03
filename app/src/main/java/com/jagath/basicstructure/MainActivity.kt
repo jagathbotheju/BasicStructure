@@ -46,15 +46,19 @@ class MainActivity : AppCompatActivity() {
     private fun validateEmail():Boolean{
         val email=txtEmail.text.toString().trim()
 
-        return if(email.isEmpty()){
-            textInputLayoutEmail.error="Email cannot be empty..."
-            false
-        }else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            textInputLayoutEmail.error="Invalid email address..."
-            return false
-        } else{
-            textInputLayoutEmail.error=null
-            true
+        return when {
+            email.isEmpty() -> {
+                textInputLayoutEmail.error="Email cannot be empty..."
+                false
+            }
+            !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
+                textInputLayoutEmail.error="Invalid email address..."
+                return false
+            }
+            else -> {
+                textInputLayoutEmail.error=null
+                true
+            }
         }
 
     }
@@ -91,7 +95,7 @@ class MainActivity : AppCompatActivity() {
             textInputLayoutPassword.error="Password cannot be empty..."
             false
         }else if(!passwordPattern.matches(password)){
-            textInputLayoutPassword.error="Password is not valid..."
+            textInputLayoutPassword.error="not valid...please use [0-9,a-z,A-Z,@,?,#,$,%,length 8 to 20]"
             return false
         }else {
             textInputLayoutPassword.error=null
